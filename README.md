@@ -7,6 +7,7 @@ The (S)CSS is bundled via a [PostCSS](https://postcss.org/) Rollup plugin to ins
 
 ## To get started
 After cloning the repo:
+
 1.`npm install`
 
 2.`npm run build`
