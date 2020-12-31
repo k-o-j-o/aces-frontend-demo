@@ -8,7 +8,9 @@ The (S)CSS is bundled via a [PostCSS](https://postcss.org/) Rollup plugin to ins
 ## To get started
 After cloning the repo:
 1.`npm install`
+
 2.`npm run build`
+
 3.`npm run serve`
 
 You can also use `npm run build:watch` to rerun the build when files are changed and/or `npm run serve:watch` to enable HMR on the local dev server.
