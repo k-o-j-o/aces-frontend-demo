@@ -1,5 +1,5 @@
 # Aces LitElement Demo
-Aces web layout rebuilt with native web components powered by[LitElement](https://lit-element.polymer-project.org/), styled with [Bulma](https://bulma.io/), and bundled with [Rollup](https://rollupjs.org/guide/en/).
+Aces web layout rebuilt with native web components powered by [LitElement](https://lit-element.polymer-project.org/), styled with [Bulma](https://bulma.io/), and bundled with [Rollup](https://rollupjs.org/guide/en/).
 
 The components are built with TypeScript and transpiled by Rollup into a [JavaScript module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) so importing all of the components is as simple as adding `<script type="module" src="[path]"></script>` in the `head` tag.
 
