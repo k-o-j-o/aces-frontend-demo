@@ -7,29 +7,38 @@ import {
 import { 
     hostDisplay, 
     thirdPartyCSS 
-} from '../util';
+} from '@util';
 //@ts-ignore
-import buttonStyle from 'bulma/sass/elements/button.sass'
+import bulmaButton from 'bulma/sass/elements/button.sass';
+//@ts-ignore
+import acesButton from '@styles/button.scss';
 
 @customElement('aces-button')
 export class AcesButton extends LitElement {
     @property({ 
         converter: (value) => `is-${value}`
     }) size: String = '';
+
     @property({
-        converter: (value, type) => {
-            console.log(type);
-            return value;
-        }
-    }) type?: (String | Array<String>);
+        converter: (value) => 
+            value
+                ?.split(/\s/)
+                .filter((mod) => !!mod)
+                .map((mod) => `is-${mod}`)
+                .join(' ')
+    }) type?: String;
 
     static get styles() {
-        return [ hostDisplay('inline-block'), thirdPartyCSS(buttonStyle) ];
+        return [ 
+            hostDisplay('inline-block'),
+            thirdPartyCSS(acesButton), 
+            thirdPartyCSS(bulmaButton) 
+        ];
     }
 
     render() {
         return html`
-        <button class="button">
+        <button class="button ${this.type}">
             <slot></slot>
         </button>
         `

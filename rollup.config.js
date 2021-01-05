@@ -2,6 +2,7 @@ import replace from '@rollup/plugin-replace';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import multi from '@rollup/plugin-multi-entry';
+import alias from '@rollup/plugin-alias';
 import postcss from 'rollup-plugin-postcss';
 import autoprefixer from 'autoprefixer';
 import sassResources from './sass-resources.plugin';
@@ -18,7 +19,14 @@ export default [{
     resolve(),
     sassResources('./src/styles/_vars.scss', '~bulma/sass/utilities/_all.sass'),
     postcss(),
-    typescript()
+    typescript(),
+    alias({
+      entries: {
+        '@components': './src/components',
+        '@styles': './src/styles',
+        '@util': './src/util.ts'
+      }
+    }),
   ],
 }, {
   input: './src/styles/bundle.js',

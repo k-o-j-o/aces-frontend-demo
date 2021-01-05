@@ -7,9 +7,11 @@ import {
 import { 
     hostDisplay, 
     thirdPartyCSS 
-} from '../util';
+} from '@util';
 //@ts-ignore
-import iconStyle from 'bulma/sass/elements/icon.sass';
+import bulmaIcon from 'bulma/sass/elements/icon.sass';
+//@ts-ignore
+import acesIcon from '@styles/icon.scss';
 //@ts-ignore
 import fontAwesome from '@fortawesome/fontawesome-free/css/all.css';
 
@@ -21,7 +23,12 @@ export class AcesIcon extends LitElement {
     }) size: String = '';
 
     static get styles() {
-        return [ hostDisplay('inline-block'), thirdPartyCSS(iconStyle), thirdPartyCSS(fontAwesome) ];
+        return [ 
+            hostDisplay('inline-block'),
+            thirdPartyCSS(bulmaIcon),
+            thirdPartyCSS(acesIcon),
+            thirdPartyCSS(fontAwesome) 
+        ];
     }
 
     render() {

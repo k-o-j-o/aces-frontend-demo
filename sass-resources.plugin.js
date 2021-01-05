@@ -4,11 +4,11 @@ export default (...resources) => ({
         if (id.endsWith('.sass')) {
             code = resources
                 .map((resource) => `@import ${resource}\n`)
-                .join('\n') + code;
+                .join('') + code;
         } else if (id.endsWith('.scss')) {
             code = resources
-                .map((resource) => `@import ${resource};\n`)
-                .join('\n') + code;
+                .map((resource) => `@import '${resource}';\n`)
+                .join('') + code;
         }
         return { code, map: null };
     }

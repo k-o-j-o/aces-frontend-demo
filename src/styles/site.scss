@@ -1,16 +1,64 @@
+@import '_vars.scss';
+@import 'button.scss';
+@import 'icon.scss';
+
+$header-height: 75px;
+$menu-open-width: 275px;
+$menu-closed-width: 1rem;
+
+html { overflow: hidden; }
+
 body {
     height: 100vh;
     width: 100vw;
-}
 
-.icon.is-small {
-    font-size: .9rem;
-}
+    header {
+        position: fixed;
+        height: $header-height;
+        width: 100vw;
+        padding: 0;
+        border-radius: 0 !important;
+        margin: 0 !important;
+        z-index: 3;
+    }
 
-.icon.is-medium {
-    font-size: 1.9rem;
-}
+    aside {
+        position: fixed;
+        top: $header-height;
+        left: 0;
+        height: calc(100vh - #{$header-height});
+        width: $menu-open-width;
+        transition: width 250ms ease;
+        will-change: width;
+        z-index: 1;
 
-.icon.is-large {
-    font-size: 2.9rem;
+        &.closed {
+            width: $menu-closed-width;
+        }
+
+        &.closed + main {
+            width: calc(100vw - #{$menu-closed-width});
+        }
+
+        &:after {
+            content: '';
+            display: inline;
+            position: absolute;
+            right: 0;
+            height: 100%;
+            width: 6px;
+            background: linear-gradient(to right, rgba($aces-gray, 0), rgba($aces-gray, .3));
+        }
+    }
+
+    main {
+        position: fixed;
+        top: $header-height;
+        right: 0;
+        height: calc(100vh - #{$header-height});
+        width: calc(100vw - #{$menu-open-width});
+        transition: width 250ms ease;
+        will-change: width;
+        z-index: 2;
+    }
 }
