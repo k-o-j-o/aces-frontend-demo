@@ -2,10 +2,6 @@
 @import 'button.scss';
 @import 'icon.scss';
 
-$header-height: 75px;
-$menu-open-width: 275px;
-$menu-closed-width: 1rem;
-
 html { overflow: hidden; }
 
 body {
@@ -14,39 +10,39 @@ body {
 
     header {
         position: fixed;
+        display: flex !important;
+        justify-content: space-between;
+        align-items: center;
         height: $header-height;
         width: 100vw;
-        padding: 0;
+        padding: 0 1rem !important;
         border-radius: 0 !important;
         margin: 0 !important;
         z-index: 3;
+
+        img {
+            height: 80%;
+        }
     }
 
-    aside {
-        position: fixed;
+    aces-menu {
+        display: inline-block;
+        position: relative;
         top: $header-height;
         left: 0;
         height: calc(100vh - #{$header-height});
         width: $menu-open-width;
-        transition: width 250ms ease;
-        will-change: width;
-        z-index: 1;
-
-        &.closed {
-            width: $menu-closed-width;
-        }
-
-        &.closed + main {
-            width: calc(100vw - #{$menu-closed-width});
-        }
+        background-color: hsl(0%, 0%, 96%);
+        z-index: 2;
 
         &:after {
             content: '';
             display: inline;
             position: absolute;
+            top: 0;
             right: 0;
             height: 100%;
-            width: 6px;
+            width: 4px;
             background: linear-gradient(to right, rgba($aces-gray, 0), rgba($aces-gray, .3));
         }
     }
@@ -59,6 +55,8 @@ body {
         width: calc(100vw - #{$menu-open-width});
         transition: width 250ms ease;
         will-change: width;
-        z-index: 2;
+        z-index: 1;
+        padding: 3rem;
+        padding-top: .75rem;
     }
 }

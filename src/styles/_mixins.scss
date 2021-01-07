@@ -1,11 +1,11 @@
 @charset "utf-8";
 
-@import "vars.scss";
+@import "_vars.scss";
 
 @mixin gradient-blue($direction: 45deg) {
-    background: linear-gradient($direction, $aces-blue, $aces-teal);
+    background: linear-gradient($direction, $aces-blue, $aces-turquoise);
 }
 
-@mixin gredient-orange($direction: 45deg) {
+@mixin gradient-orange($direction: 45deg) {
     background: linear-gradient($direction, $aces-orange, $aces-yellow);
 }

@@ -8,7 +8,7 @@ import autoprefixer from 'autoprefixer';
 import sassResources from './sass-resources.plugin';
 
 export default [{
-  input: './src/components/*.ts',
+  input: './src/components/**/*.ts',
   output: { 
     file: './dist/components.mjs',
     sourcemap: true
@@ -17,7 +17,7 @@ export default [{
     multi(),
     replace({'Reflect.decorate': 'undefined'}),
     resolve(),
-    sassResources('./src/styles/_vars.scss', '~bulma/sass/utilities/_all.sass'),
+    sassResources('./src/styles/_vars.scss', './src/styles/_mixins.scss', '~bulma/sass/utilities/_all.sass'),
     postcss(),
     typescript(),
     alias({
