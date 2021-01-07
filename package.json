@@ -1,5 +1,5 @@
 {
-  "name": "aces-frontend-demo",
+  "name": "frontend-demo",
   "version": "1.0.0",
   "description": "",
   "private": true,
@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/k-o-j-o/aces-frontend-demo.git"
+    "url": "git+https://github.com/k-o-j-o/frontend-demo.git"
   },
-  "author": "Kaleb Baldwin <kbaldwin@acesquality.com>",
+  "author": "Kaleb Baldwin <baldwinjkaleb@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/k-o-j-o/aces-frontend-demo/issues"
+    "url": "https://github.com/k-o-j-o/frontend-demo/issues"
   },
-  "homepage": "https://github.com/k-o-j-o/aces-frontend-demo#readme",
+  "homepage": "https://github.com/k-o-j-o/frontend-demo#readme",
   "devDependencies": {
     "@rollup/plugin-alias": "^3.1.1",
     "@rollup/plugin-multi-entry": "^4.0.0",

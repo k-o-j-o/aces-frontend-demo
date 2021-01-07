@@ -15,17 +15,18 @@ body {
         align-items: center;
         height: $header-height;
         width: 100vw;
-        padding: 0 1rem !important;
+        padding: 0 !important;
+        padding-right: 1rem !important;
         border-radius: 0 !important;
         margin: 0 !important;
         z-index: 3;
 
         img {
-            height: 80%;
+            height: 160%;
         }
     }
 
-    aces-menu {
+    app-menu {
         display: inline-block;
         position: relative;
         top: $header-height;
@@ -43,7 +44,7 @@ body {
             right: 0;
             height: 100%;
             width: 4px;
-            background: linear-gradient(to right, rgba($aces-gray, 0), rgba($aces-gray, .3));
+            background: linear-gradient(to right, rgba($app-gray, 0), rgba($app-gray, .3));
         }
     }
 

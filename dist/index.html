@@ -3,23 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ACES LitElement Demo</title>
+    <title>LitElement Demo</title>
     <script type="module" src="components.mjs"></script>
     <link rel="stylesheet" href="bundle.css">
     <script src="https://kit.fontawesome.com/3f7999dc2b.js" crossorigin="anonymous"></script></head>
 <body>
     <header class="box">
-        <img src="aces-logo.png">
+        <img src="app-logo.svg">
         <div>
-            <aces-button type="inverted primary circle">
-                <aces-icon size="medium" icon="bell"></aces-icon>
-            </aces-button>
-            <aces-button type="inverted primary circle">
-                <aces-icon size="medium" icon="user"></aces-icon>
-            </aces-button>
+            <app-button type="inverted primary circle">
+                <app-icon size="medium" icon="bell"></app-icon>
+            </app-button>
+            <app-button type="inverted primary circle">
+                <app-icon size="medium" icon="user"></app-icon>
+            </app-button>
         </div>
     </header>
-    <aces-menu></aces-menu>
+    <app-menu></app-menu>
     <main>
         <nav class="breadcrumb mb-2" aria-label="breadcrumbs">
             <ul>
@@ -28,11 +28,11 @@
                 <li class="is-active"><a href="#">Item</a></li>
             </ul>
         </nav>
-        <aces-panel heading="Lorum Ipsum">
+        <app-panel heading="Lorum Ipsum">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed mattis sapien id tortor porttitor pretium. Vestibulum ut eleifend erat. Duis varius faucibus scelerisque. In laoreet efficitur vulputate. Pellentesque et augue ac lorem tincidunt dictum. Etiam ultrices purus turpis, at elementum nunc rhoncus eget. Donec eu congue arcu, vitae dignissim nibh. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis leo libero, malesuada quis ante et, scelerisque rhoncus quam. Phasellus felis tortor, congue a iaculis quis, vestibulum non ipsum. Sed rutrum risus id aliquet consequat.
             <br /><br/>
             Fusce mattis nunc eu lectus varius, id ultricies ipsum varius. Nam est justo, porta vitae iaculis eget, placerat sed nisl. Donec maximus arcu at sem gravida, sed porttitor nulla cursus. Fusce sodales at lacus vitae gravida. Quisque dui ligula, semper eget tincidunt auctor, cursus at urna. Aenean in sodales enim. Sed vestibulum tristique mollis. Aliquam quis elit sed purus sollicitudin maximus sed non arcu. Morbi dictum, ligula eleifend euismod tincidunt, tellus mi dictum urna, vitae auctor lectus sem at tortor. Donec ornare lectus felis.
-        </aces-panel>
+        </app-panel>
     </main>
 </body>
 </html>

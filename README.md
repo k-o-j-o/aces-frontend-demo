@@ -1,9 +1,9 @@
-# Aces LitElement Demo
-Aces web layout rebuilt with native web components powered by [LitElement](https://lit-element.polymer-project.org/), styled with [Bulma](https://bulma.io/), and bundled with [Rollup](https://rollupjs.org/guide/en/).
+# LitElement Demo
+Dashboard layout built with native web components powered by [LitElement](https://lit-element.polymer-project.org/), styled with [Bulma](https://bulma.io/), and bundled with [Rollup](https://rollupjs.org/guide/en/).
 
 The components are built with TypeScript and transpiled by Rollup into a [JavaScript module](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Modules) so importing all of the components is as simple as adding `<script type="module" src="[path]"></script>` in the `head` tag.
 
-The (S)CSS is bundled via a [PostCSS](https://postcss.org/) Rollup plugin to insert the Aces color palette into Bulma and to make use of the [Autoprefixer](https://github.com/postcss/autoprefixer) plugin.
+The (S)CSS is bundled via a [PostCSS](https://postcss.org/) Rollup plugin to insert our color palette into Bulma and to make use of the [Autoprefixer](https://github.com/postcss/autoprefixer) plugin.
 
 ## To get started
 After cloning the repo:

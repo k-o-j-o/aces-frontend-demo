@@ -3,9 +3,9 @@
 @import "_vars.scss";
 
 @mixin gradient-blue($direction: 45deg) {
-    background: linear-gradient($direction, $aces-blue, $aces-turquoise);
+    background: linear-gradient($direction, $app-blue, $app-turquoise);
 }
 
 @mixin gradient-orange($direction: 45deg) {
-    background: linear-gradient($direction, $aces-orange, $aces-yellow);
+    background: linear-gradient($direction, $app-orange, $app-yellow);
 }

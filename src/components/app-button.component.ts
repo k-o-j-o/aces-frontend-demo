@@ -11,10 +11,10 @@ import {
 //@ts-ignore
 import bulmaButton from 'bulma/sass/elements/button.sass';
 //@ts-ignore
-import acesButton from '@styles/button.scss';
+import appButton from '@styles/button.scss';
 
-@customElement('aces-button')
-export class AcesButton extends LitElement {
+@customElement('app-button')
+export class AppButton extends LitElement {
     @property({ 
         converter: (value) => `is-${value}`
     }) size: String = '';
@@ -31,7 +31,7 @@ export class AcesButton extends LitElement {
     static get styles() {
         return [ 
             hostDisplay('inline-block'),
-            thirdPartyCSS(acesButton), 
+            thirdPartyCSS(appButton), 
             thirdPartyCSS(bulmaButton) 
         ];
     }

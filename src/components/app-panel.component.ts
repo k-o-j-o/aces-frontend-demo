@@ -11,17 +11,17 @@ import {
 //@ts-ignore
 import bulmaPanel from 'bulma/sass/components/panel.sass';
 //@ts-ignore
-import acesPanel from '@styles/panel.scss';
+import appPanel from '@styles/panel.scss';
 
-@customElement('aces-panel')
-export class AcesPanel extends LitElement {
+@customElement('app-panel')
+export class AppPanel extends LitElement {
     @property() heading?: string;
 
     static get styles() {
         return [
             hostDisplay('inline-block'),
             thirdPartyCSS(bulmaPanel),
-            thirdPartyCSS(acesPanel)
+            thirdPartyCSS(appPanel)
         ]
     }
 

@@ -29,12 +29,12 @@ const MENU_ITEMS = [{
     name: 'Setup',
     icon: 'cogs'
 }, {
-    name: 'Aces Setup',
+    name: 'Support',
     icon: 'life-ring'
 }];
 
-@renderElement('aces-menu')
-export class AcesMenu extends LitElement {
+@renderElement('app-menu')
+export class AppMenu extends LitElement {
     @internalProperty() isOpen: boolean = true;
 
     constructor() {
@@ -46,13 +46,13 @@ export class AcesMenu extends LitElement {
         return html`
         <aside>
             <button id="toggle" class="box" @click="${this.toggleMenu}">
-                <aces-icon icon="${this.isOpen ? 'chevron-left' : 'chevron-right'}"></aces-icon>
+                <app-icon icon="${this.isOpen ? 'chevron-left' : 'chevron-right'}"></app-icon>
             </button>
             <nav>
                 <ul>
                     ${MENU_ITEMS.map((menuItem) => html`
                         <li class="menu-item">
-                            <aces-icon icon="${menuItem.icon}"></aces-icon>
+                            <app-icon icon="${menuItem.icon}"></app-icon>
                             <span>${menuItem.name}</span>
                         </li>
                     `)}

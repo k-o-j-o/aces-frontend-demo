@@ -1,4 +1,4 @@
-aces-menu {
+app-menu {
     transition: width 250ms ease;
     will-change: width;
 
@@ -24,15 +24,15 @@ aces-menu {
             padding: 0;
             border-radius: 50%;
             background-color: white;
-            color: rgba($aces-gray, .5);
-            border: 1px solid rgba($aces-gray, .5);
+            color: rgba($app-gray, .5);
+            border: 1px solid rgba($app-gray, .5);
             cursor: pointer;
             z-index: 10;
             outline: none;
 
             &:hover {
-                color: $aces-gray;
-                border: 1px solid $aces-gray;
+                color: $app-gray;
+                border: 1px solid $app-gray;
             }
         }
 
@@ -50,7 +50,7 @@ aces-menu {
 
         &:hover {
             @include gradient-blue;
-            color: $aces-blue;
+            color: $app-blue;
         }
 
         &:before {
@@ -66,11 +66,11 @@ aces-menu {
             z-index: 1;
         }
 
-        aces-icon {
+        app-icon {
             margin-right: .5rem;
             position: relative;
             z-index: 2;
-            color: $aces-gray !important;
+            color: $app-gray !important;
         }
 
         span {

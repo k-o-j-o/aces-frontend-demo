@@ -11,12 +11,12 @@ import {
 //@ts-ignore
 import bulmaIcon from 'bulma/sass/elements/icon.sass';
 //@ts-ignore
-import acesIcon from '@styles/icon.scss';
+import appIcon from '@styles/icon.scss';
 //@ts-ignore
 import fontAwesome from '@fortawesome/fontawesome-free/css/all.css';
 
-@customElement('aces-icon')
-export class AcesIcon extends LitElement {
+@customElement('app-icon')
+export class AppIcon extends LitElement {
     @property() icon: String = 'circle';
     @property({ 
         converter: (value) => `is-${value}`
@@ -26,7 +26,7 @@ export class AcesIcon extends LitElement {
         return [ 
             hostDisplay('inline-block'),
             thirdPartyCSS(bulmaIcon),
-            thirdPartyCSS(acesIcon),
+            thirdPartyCSS(appIcon),
             thirdPartyCSS(fontAwesome) 
         ];
     }
